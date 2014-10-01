@@ -1,0 +1,9 @@
+*~
+*.diff
+*.patch
+.DS_Store
+
+/vendor
+/dist
+/node_modules
+/bower_components
