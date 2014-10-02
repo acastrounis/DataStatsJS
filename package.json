@@ -1,0 +1,44 @@
+{
+  "name": "datastatsjs",
+  "title": "datastatsjs",
+  "description": "JavaScript library for data science and statistics",
+  "version": "0.1",
+  "main": "dist/datastats.js",
+  "homepage": "https://github.com/acastrounis/DataStatsJS",
+  "author": {
+    "name": "Alex Castrounis",
+    "url": "http://www.innoarchitech.com/about/"
+  },
+  "contributors": [
+    "Aaron Burgess",
+    "Ben Schmitt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acastrounis/DataStatsJS"
+  },
+  "keywords": [
+    "statistics",
+    "javascript",
+    "data science",
+    "library" //TODO: Add appropriate keywords
+  ],
+  "bugs": {
+    "url": "https://github.com/acastrounis/DataStatsJS/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/acastrounis/DataStatsJS/blob/master/LICENSE.txt"
+    }
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "build": "npm install && grunt",
+    "start": "grunt watch",
+    "test": "grunt"
+  }
+}
