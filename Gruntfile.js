@@ -5,9 +5,9 @@ var paths = {
 		js: ['./']
 	},
 	files = {
-		grunt: ['./gruntfile.js'],
-		js: ['./**/*.js', './**/*.json'],
-		test: ['./test/*.js']
+		grunt: ['./Gruntfile.js'],
+		js: ['datastats.js', 'package.json', 'Gruntfile.js', 'test/**/*.js'],
+		test: ['test/**/*.js']
 	};
 
 module.exports = function(grunt) {
@@ -17,15 +17,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: files.js,
-        tasks: ['jshint:all']
-      },
-      test: {
-        files: files.test,
-        tasks: ['']
-      },
-      gruntfile: {
-        files: files.grunt,
-        tasks: ['']
+        tasks: ['jshint:all', 'mochaTest:test']
       }
     },
     jshint: {
@@ -36,6 +28,16 @@ module.exports = function(grunt) {
           reporter: require('jshint-stylish')
         }
       }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec',
+          captureFile: 'test/results.txt',
+          quiet: true
+        },
+        src: ['test/**/*.js']
+      }
     }
   });
 
@@ -44,4 +46,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch:js']);
   grunt.registerTask('build', ['']);
   grunt.registerTask('qa', ['jshint:all']);
+  grunt.registerTask('test', ['mochaTest:test']);
 };
