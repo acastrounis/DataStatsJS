@@ -1,15 +1,14 @@
-  
-  function sum(arr){
+  function sum(arr) {
     var total = 0;
-    
+
     for (var i = 0; i < arr.length; i++) {
       total = total + arr[i];
     }
-    
+
     return total;
   }
 
-  function mean(arr){
+  function mean(arr) {
     return sum(arr) / arr.length;
   }
 

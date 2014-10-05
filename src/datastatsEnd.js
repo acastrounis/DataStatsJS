@@ -1,8 +1,7 @@
-  
   if (typeof module !== 'undefined') {
-      module.exports = dStats;
+    module.exports = dStats;
   } else {
-      this.dStats = dStats;
+    this.dStats = dStats;
   }
-  
+
 }.call(this));
